@@ -1,0 +1,1 @@
+select * from post where date = current_date;

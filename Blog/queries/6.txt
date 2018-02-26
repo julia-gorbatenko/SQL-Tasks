@@ -1,0 +1,1 @@
+select * from post where ASCII(post.title) = 83';

@@ -1,0 +1,4 @@
+select post.postID, post.title, post.text ,group_concat(tag.tagName) as tags
+from ((post
+left join tagPost on post.postID = tagPost.posts_postID)
+left join tag on tagPost.tags_tagID = tag.tagID) group by postID;

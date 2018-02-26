@@ -1,0 +1,1 @@
+select sum(current_date-birthDate)/count(userID) from users;

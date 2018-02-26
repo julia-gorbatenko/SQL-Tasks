@@ -1,0 +1,4 @@
+select  post.postID, post.title, post.text, post.date
+from ((post
+left join tagPost ON post.postID = tagPost.posts_postID)
+left join tag ON tagPost.tags_tagID = tag.tagID) where tag.tagName is null;
