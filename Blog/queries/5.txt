@@ -1,4 +1,4 @@
-select  post.postID, post.title, post.text, post.date
-from ((post
-left join tagPost ON post.postID = tagPost.posts_postID)
-left join tag ON tagPost.tags_tagID = tag.tagID) where tag.tagName is null;
+SELECT  posts.postID, posts.title, posts.text, posts.date
+FROM ((posts
+LEFT JOIN tag-post ON posts.postID = tag-post.posts_postID)
+LEFT JOIN tags ON tag-post.tags_tagID = tags.tagID) WHERE tags.tagName is null;

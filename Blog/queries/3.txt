@@ -1,1 +1,1 @@
-select * from post order by date desc limit 5;
+SELECT * FROM posts OREDER BY date DESC LIMIT 5;

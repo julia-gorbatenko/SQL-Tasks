@@ -1,7 +1,7 @@
-select firstName, lastName, count(postID) as QNTY
-from user
-join post on user.userID=post.author
-join tagPost on post.postID = tagPost.posts_postID
-JOIN tag ON tagPost.tags_tagID = tag.tagID
-group by author 
-order by QNTY desc limit 5;
+SELECT firstName, lastName, count(postID) as QNTY
+FROM users
+JOIN posts on users.userID=post.author
+JOIN tag-post ON posts.postID = tag-post.posts_postID
+JOIN tag ON tag-post.tags_tagID = tags.tagID
+GROUP BY author 
+ORDER BY QNTY DESC LIMIT 5;

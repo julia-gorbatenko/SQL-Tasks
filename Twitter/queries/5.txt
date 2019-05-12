@@ -1,4 +1,4 @@
-select nickname, count(twitID) as QTY from users 
-left join twits on userID=author
-group by author
-having count (twitID)=0;
+SELECT nickname, count(twitID) as QTY from users 
+LEFT JOIN twits ON userID=author
+GROUP BY author
+HAVING COUNT(twitID)=0;

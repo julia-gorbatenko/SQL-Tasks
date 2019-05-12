@@ -1,6 +1,6 @@
-select tagName, count(postID) as QNTY
-from tag 
-join tagPost ON tagPost.tags_tagID = tag.tagID
-join post on tagPost.posts_postID = post.postID
-group by tagName 
-order by QNTY desc
+SELECT tagName, count(postID) as QNTY
+FROM tags 
+JOIN tag-post ON tag-post.tags_tagID = tags.tagID
+JOIN posts ON tag-post.posts_postID = posts.postID
+GROUP BY tagName 
+ORDER BY QNTY DESC;

@@ -1,2 +1,1 @@
-select twitID,  twitText from twits
-order by date desc limit 5;
+SELECT twitID,  twitText from twits ORDER BY date DESC LIMIT 5;

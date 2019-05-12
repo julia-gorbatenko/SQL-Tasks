@@ -1,0 +1,3 @@
+
+SELECT commentText, commentDate FROM comments WHERE commentDate BETWEEN 
+SUBDATE(NOW(), INTERVAL 10 HOUR) AND NOW() ORDER BY commentDate;

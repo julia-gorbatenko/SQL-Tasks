@@ -1,4 +1,4 @@
-select nickname, count(followerID) as QTY from users
-left join followers on userID=userIFollowD
-where followerID >= '1'
-group by userID;
+SELECT nickname, count(followerID) as QTY from users
+LEFT JOIN followers ON userID=userFollowID
+HAVING COUNT(followerID) >= 1
+GROUP BY userID;

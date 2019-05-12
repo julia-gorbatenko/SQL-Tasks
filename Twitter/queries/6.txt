@@ -1,0 +1,5 @@
+
+SELECT tweetID, tweetText, COUNT(comments.commentID) as QTY FROM tweets
+INNER JOIN comments ON comments.tweetID = twits.tweetID
+GROUP BY comments.tweetID
+ORDER BY QTY DESC;

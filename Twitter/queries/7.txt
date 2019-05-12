@@ -1,0 +1,8 @@
+SELECT users.userID, users.nickname, twits.twitText, tweets.twitDate FROM tweets
+JOIN users ON users.userID = tweets.authorID
+WHERE users.userID = 0
+UNION
+SELECT users.userID, users.nickname, twits.tweetText, tweets.tweetDate FROM tweets
+JOIN users ON users.userID = tweets.authorID
+WHERE users.userID IN (SELECT followerID FROM followers WHERE userFollowID = 0)
+ORDER BY twitDate DESC;
