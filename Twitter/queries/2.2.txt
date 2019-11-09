@@ -1,0 +1,1 @@
+SELECT AVG(current_date-birthDate) FROM users;
